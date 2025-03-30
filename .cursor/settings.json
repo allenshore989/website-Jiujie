@@ -1,0 +1,55 @@
+{
+  // 核心性能和内存设置
+  "window.autoDetectColorScheme": false,
+  "window.menuBarVisibility": "compact",
+  "editor.minimap.enabled": false,
+  "editor.bracketPairColorization.enabled": false,
+  
+  // 基础自动确认设置
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmCreate": false,
+  "git.confirmSync": false,
+  "debug.onTaskErrors": "showErrors",
+  
+  // 文件和工作区设置
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 3000,
+  "security.workspace.trust.enabled": false,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/node_modules/**": true,
+    "**/dist/**": true,
+    "**/build/**": true
+  },
+  
+  // 内存优化设置 - 增加分配给Cursor的内存
+  "window.zoomLevel": 0,
+  "window.restoreWindows": "all",
+  "editor.unfoldOnClickAfterEndOfLine": true,
+  "workbench.editor.closeOnFileDelete": false,
+  "workbench.editor.limit.enabled": false,
+  "terminal.integrated.gpuAcceleration": "on",
+  
+  // AI功能增强 - 有更多内存可用
+  "cursor.aiEnabled": true,
+  "cursor.autoCompletion.enabled": true,
+  "cursor.aiCompletion.maxPromptTokens": 2048,
+  "cursor.aiCompletion.maxResponseTokens": 1536,
+  "cursor.aiCompletion.maxRequestsPerMinute": 6,
+  "cursor.aiCompletion.maxConcurrentRequests": 2,
+  "cursor.aiCompletion.delayBetweenRequests": 1500,
+  
+  // 关键命令自动确认
+  "npm.autoDetect": "on",
+  "npm.runInTerminal": true,
+  "terminal.integrated.confirmOnExit": "never",
+  "terminal.integrated.shellIntegration.enabled": true,
+  "files.createDirectoryWhenOpeningNewFile": true,
+  
+  // 性能设置 - 关闭自动更新以避免中断
+  "update.mode": "manual",
+  "extensions.autoCheckUpdates": false,
+  "extensions.autoUpdate": false,
+  "telemetry.telemetryLevel": "off"
+}

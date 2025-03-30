@@ -1,0 +1,61 @@
+.git
+.github
+.next
+node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+Dockerfile
+docker-compose.yml
+.dockerignore
+.env
+.env.local
+.env.*
+*.md
+nginx
+data
+.cursor
+.vscode
+.idea
+.DS_Store
+
+# 备份文件
+*.bak
+*.backup
+*.old
+*.tmp
+
+# 日志文件
+logs
+*.log
+
+# 测试文件
+test
+tests
+__tests__
+coverage
+
+# docker相关
+docker-compose*.yml
+*.sh
+
+# 大型媒体文件(如果有)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.psd
+*.ai
+*.pdf
+
+# 其他巨大的二进制文件或压缩文件
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+*.gz
+
+# 阿里云部署文件(仅在本地需要)
+/mysql-init
+/nginx 

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <!-- 背景 -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.7" />
+    </linearGradient>
+    <!-- 叠加图案 -->
+    <pattern id="overlay" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="40" cy="40" r="1" fill="rgba(255,255,255,0.2)" />
+      <circle cx="0" cy="0" r="1" fill="rgba(255,255,255,0.2)" />
+      <circle cx="0" cy="80" r="1" fill="rgba(255,255,255,0.2)" />
+      <circle cx="80" cy="0" r="1" fill="rgba(255,255,255,0.2)" />
+      <circle cx="80" cy="80" r="1" fill="rgba(255,255,255,0.2)" />
+    </pattern>
+  </defs>
+  
+  <!-- 主背景 -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)" />
+  <rect width="100%" height="100%" fill="url(#overlay)" />
+  
+  <!-- 左侧：传统元素 - 太极图 -->
+  <g transform="translate(300, 300)">
+    <circle cx="0" cy="0" r="120" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+    <path d="M0,-120 A120,120 0 0,1 0,120 A60,60 0 0,0 0,0 A60,60 0 0,1 0,-120" fill="rgba(255,255,255,0.1)" />
+    <path d="M0,-120 A120,120 0 0,0 0,120 A60,60 0 0,1 0,0 A60,60 0 0,0 0,-120" fill="rgba(255,255,255,0.05)" />
+    <circle cx="0" cy="-60" r="15" fill="rgba(255,255,255,0.15)" />
+    <circle cx="0" cy="60" r="15" fill="rgba(255,255,255,0.05)" />
+  </g>
+  
+  <!-- 右侧：现代科技元素 -->
+  <g transform="translate(900, 300)">
+    <!-- 电路板图案 -->
+    <rect x="-100" y="-100" width="200" height="200" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+    
+    <!-- 线条 -->
+    <line x1="-100" y1="-50" x2="100" y2="-50" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+    <line x1="-100" y1="0" x2="100" y2="0" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+    <line x1="-100" y1="50" x2="100" y2="50" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+    <line x1="-50" y1="-100" x2="-50" y2="100" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+    <line x1="0" y1="-100" x2="0" y2="100" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+    <line x1="50" y1="-100" x2="50" y2="100" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+    
+    <!-- 节点 -->
+    <circle cx="-50" cy="-50" r="5" fill="rgba(255,255,255,0.3)" />
+    <circle cx="0" cy="-50" r="5" fill="rgba(255,255,255,0.3)" />
+    <circle cx="50" cy="-50" r="5" fill="rgba(255,255,255,0.3)" />
+    <circle cx="-50" cy="0" r="5" fill="rgba(255,255,255,0.3)" />
+    <circle cx="0" cy="0" r="5" fill="rgba(255,255,255,0.3)" />
+    <circle cx="50" cy="0" r="5" fill="rgba(255,255,255,0.3)" />
+    <circle cx="-50" cy="50" r="5" fill="rgba(255,255,255,0.3)" />
+    <circle cx="0" cy="50" r="5" fill="rgba(255,255,255,0.3)" />
+    <circle cx="50" cy="50" r="5" fill="rgba(255,255,255,0.3)" />
+    
+    <!-- 数据流动效果 -->
+    <circle cx="-25" cy="-75" r="3" fill="rgba(0,255,255,0.4)" />
+    <circle cx="25" cy="-25" r="3" fill="rgba(0,255,255,0.4)" />
+    <circle cx="75" cy="25" r="3" fill="rgba(0,255,255,0.4)" />
+    <circle cx="-75" cy="75" r="3" fill="rgba(0,255,255,0.4)" />
+  </g>
+  
+  <!-- 中间连接元素 -->
+  <g opacity="0.2">
+    <line x1="420" y1="300" x2="780" y2="300" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
+    <circle cx="600" cy="300" r="15" fill="rgba(255,255,255,0.5)" />
+  </g>
+  
+  <!-- 中文字符：融合 -->
+  <text x="550" y="450" font-family="serif" font-size="100" fill="rgba(255,255,255,0.1)">融合</text>
+  
+  <!-- 装饰元素 -->
+  <circle cx="200" cy="150" r="30" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+  <circle cx="1000" cy="150" r="30" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+  <rect x="550" y="50" width="100" height="100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" transform="rotate(30, 600, 100)" />
+</svg> 

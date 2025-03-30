@@ -1,36 +1,162 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 易文化研究与环境能量设计网站
 
-## Getting Started
+这是一个专注于中国易文化研究与环境能量设计的个人网站，采用中国风元素设计，简约而漂亮。现已集成数据库驱动的完整后台管理系统。
 
-First, run the development server:
+## 网站特点
+
+- **中国风设计**：采用传统中国风元素与现代设计相结合的美学风格
+- **易经主题**：专注于易经智慧在现代环境设计中的应用
+- **响应式布局**：完美适配移动设备、平板和桌面电脑
+- **多页面结构**：包含首页、关于我、服务项目、易经研究、博客和联系方式等页面
+- **数据库驱动**：支持留言、分支机构和FAQ的数据库管理
+- **完整后台**：集成的管理后台，方便内容维护
+
+## 技术栈
+
+- Next.js 14
+- React
+- TypeScript
+- Tailwind CSS
+- Prisma (数据库ORM)
+- SQLite (开发环境数据库)
+- Framer Motion (动画效果)
+- React Icons (图标库)
+
+## 如何运行
+
+确保您已安装 Node.js 和 npm。
+
+1. 克隆仓库
+
+```bash
+git clone <仓库地址>
+cd site002
+```
+
+2. 安装依赖
+
+```bash
+npm install
+```
+
+3. 数据库初始化
+
+```bash
+# 生成Prisma客户端
+npx prisma generate
+
+# 创建数据库并应用模型
+npx prisma db push
+
+# 填充测试数据
+npx ts-node prisma/seed.ts
+```
+
+4. 运行开发服务器
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. 在浏览器中访问：
+   - 前台网站：[http://localhost:3003](http://localhost:3003)
+   - 后台管理：[http://localhost:3003/admin](http://localhost:3003/admin)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 构建生产版本
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+要构建生产版本，请运行:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+然后可以使用以下命令启动生产服务器:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 项目结构
 
-## Deploy on Vercel
+```
+site002/
+├── prisma/                # 数据库相关
+│   ├── schema.prisma      # 数据库模型
+│   └── seed.ts            # 测试数据生成
+├── src/
+│   ├── app/               # 应用页面
+│   │   ├── admin/         # 管理系统页面
+│   │   │   ├── dashboard/ # 仪表盘页面
+│   │   │   ├── branches/  # 分支机构管理
+│   │   │   ├── faqs/      # FAQ管理
+│   │   │   ├── messages/  # 留言管理
+│   │   │   └── settings/  # 系统设置
+│   │   ├── api/           # API端点
+│   │   ├── about/         # 关于我页面
+│   │   ├── blog/          # 博客页面
+│   │   ├── contact/       # 联系方式页面
+│   │   ├── services/      # 服务项目页面
+│   │   ├── studies/       # 易经研究页面
+│   │   ├── page.tsx       # 首页
+│   │   ├── layout.tsx     # 全局布局
+│   │   └── globals.css    # 全局样式
+│   ├── components/        # 公共组件
+├── public/                # 静态资源(图片等)
+├── package.json           # 项目依赖与脚本
+└── tailwind.config.ts     # Tailwind CSS 配置
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 主要功能
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 前台功能
+1. **首页**：展示网站主要内容和服务概览
+2. **关于我**：介绍环境能量设计师的背景和专业知识
+3. **服务项目**：详细介绍提供的各种服务及价格
+4. **易经研究**：分享易经相关的研究成果和应用方法
+5. **博客**：发布行业文章和易经知识
+6. **联系方式**：提供联系表单和联系信息
+
+### 后台功能
+1. **仪表盘**：展示关键数据和统计信息
+2. **留言管理**：处理、回复和归档客户留言
+3. **分支机构管理**：添加和管理全国分支机构信息
+4. **FAQ管理**：维护网站常见问题解答
+5. **设置**：管理网站系统设置
+
+## 后台管理系统使用说明
+
+### 留言管理
+- 查看所有客户留言
+- 按状态和关键词筛选留言
+- 更新留言状态（待处理、已回复、已归档）
+- 添加处理备注
+- 删除留言
+
+### 分支机构管理
+- 添加新分支机构
+- 编辑现有分支机构信息
+- 删除不需要的分支机构
+
+### FAQ管理
+- 添加新的常见问题
+- 编辑问题内容和答案
+- 调整问题显示顺序
+- 按类别管理问题
+- 删除过时问题
+
+## 部署说明
+
+项目支持多种部署方式，详见`deployment-methods.md`文件。
+
+## 数据库说明
+
+项目使用Prisma ORM和SQLite数据库。主要数据模型包括：
+- `ContactMessage`：存储联系表单提交
+- `BranchOffice`：存储分支机构信息
+- `FAQ`：存储常见问题数据
+
+在生产环境中，建议将SQLite替换为MySQL或PostgreSQL等数据库。
+
+## 许可
+
+[MIT](LICENSE)

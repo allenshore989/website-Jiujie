@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <!-- 背景 -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#713f12" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#a16207" stop-opacity="0.7" />
+    </linearGradient>
+    <!-- 叠加图案 -->
+    <pattern id="overlay" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M0,50 C25,25 75,75 100,50 M50,0 C75,25 25,75 50,100" stroke="rgba(255,255,255,0.05)" stroke-width="1" fill="none" />
+    </pattern>
+  </defs>
+  
+  <!-- 主背景 -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)" />
+  <rect width="100%" height="100%" fill="url(#overlay)" />
+  
+  <!-- 中心装饰图案：和谐家居 -->
+  <g transform="translate(600, 300)">
+    <!-- 抽象房屋图案 -->
+    <path d="M-200,-80 L0,-180 L200,-80 L200,100 L-200,100 Z" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
+    
+    <!-- 内部空间划分 -->
+    <line x1="-100" y1="-80" x2="-100" y2="100" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+    <line x1="0" y1="-130" x2="0" y2="100" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+    <line x1="100" y1="-80" x2="100" y2="100" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+    <line x1="-200" y1="0" x2="200" y2="0" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+    
+    <!-- 门窗元素 -->
+    <rect x="-50" y="50" width="100" height="50" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+    <rect x="-150" y="-50" width="50" height="50" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+    <rect x="100" y="-50" width="50" height="50" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+    
+    <!-- 能量流动线 -->
+    <path d="M-150,50 C-100,20 -50,80 0,50 C50,20 100,80 150,50" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-dasharray="5,5" />
+  </g>
+  
+  <!-- 左侧元素：阴 -->
+  <g transform="translate(200, 300)">
+    <circle cx="0" cy="0" r="80" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
+    <path d="M-40,0 A40,40 0 0,1 40,0 A40,40 0 0,1 -40,0" fill="rgba(255,255,255,0.1)" transform="rotate(180)" />
+    <!-- 中文：阴 -->
+    <text x="0" y="10" font-family="serif" font-size="40" fill="rgba(255,255,255,0.2)" text-anchor="middle">阴</text>
+  </g>
+  
+  <!-- 右侧元素：阳 -->
+  <g transform="translate(1000, 300)">
+    <circle cx="0" cy="0" r="80" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
+    <path d="M-40,0 A40,40 0 0,1 40,0 A40,40 0 0,1 -40,0" fill="rgba(255,255,255,0.1)" />
+    <!-- 中文：阳 -->
+    <text x="0" y="10" font-family="serif" font-size="40" fill="rgba(255,255,255,0.2)" text-anchor="middle">阳</text>
+  </g>
+  
+  <!-- 中文字符：和谐 -->
+  <text x="550" y="500" font-family="serif" font-size="100" fill="rgba(255,255,255,0.1)">和谐</text>
+  
+  <!-- 装饰元素 -->
+  <circle cx="600" cy="100" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+  <circle cx="600" cy="100" r="20" fill="rgba(255,255,255,0.05)" />
+  
+  <!-- 左上角装饰 -->
+  <path d="M100,100 L150,100 L150,150" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+  <path d="M120,120 L170,120 L170,170" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+  
+  <!-- 右上角装饰 -->
+  <path d="M1100,100 L1050,100 L1050,150" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+  <path d="M1080,120 L1030,120 L1030,170" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+</svg> 

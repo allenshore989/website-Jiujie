@@ -1,0 +1,243 @@
+﻿"use client";
+
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import Carousel from '@/components/Carousel';
+
+export default function ClientHomePage() {
+  // 杞挱鍥炬暟鎹?
+  const carouselItems = [
+    {
+      id: 1,
+      image: '/images/carousel/slide1.jpg',
+      title: '鍜岃皭绌洪棿锛屽钩琛′汉鐢?,
+      description: '鏄撶粡鐜璁捐涓烘偍鎵撻€犱笌鑷劧鍏辩敓鐨勪汉灞呯幆澧?,
+      link: '/services'
+    },
+    {
+      id: 2,
+      image: '/images/carousel/slide2.jpg',
+      title: '闃撮槼鐩告祹锛屼簲琛岀浉鐢?,
+      description: '涓撲笟椋庢按鍥㈤槦锛屽姪鎮ㄨ惀閫犱簨涓氫笌瀹跺涵鐨勫弻涓版敹',
+      link: '/cases'
+    },
+    {
+      id: 3,
+      image: '/images/carousel/slide3.jpg',
+      title: '浼犵粺鏅烘収锛岀幇浠ｈ璁?,
+      description: '缁撳悎鏄撶粡鍝插涓庣幇浠ｈ璁＄悊蹇碉紝鍒涢€犲拰璋愮敓娲荤┖闂?,
+      link: '/about'
+    }
+  ];
+
+  // 妗堜緥灞曠ず鏁版嵁
+  const caseStudies = [
+    {
+      id: 1,
+      image: '/images/article-featured-1.jpg',
+      title: '鍖椾含鏌愮鎶€鍏徃鍔炲叕绌洪棿',
+      description: '閫氳繃浜旇鍏冪礌骞宠　锛屾彁鍗囧憳宸ュ垱閫犲姏涓庡嚌鑱氬姏',
+      category: '鍟嗕笟绌洪棿'
+    },
+    {
+      id: 2,
+      image: '/images/article-featured-2.jpg',
+      title: '涓婃捣璞畢绉佷汉瀹氬埗',
+      description: '渚濇嵁涓讳汉鍏瓧锛岀簿蹇冨竷灞€锛岃惀閫犲瘜璐靛钩瀹変箣瀹?,
+      category: '浣忓畢璁捐'
+    },
+    {
+      id: 3,
+      image: '/images/articles/yin-yang.jpg',
+      title: '鎴愰兘鑼堕绌洪棿璁捐',
+      description: '缁撳悎褰撳湴鏂囧寲涓庨姘村锛屾墦閫犻泤鑷翠紤闂插満鎵€',
+      category: '鏂囧寲绌洪棿'
+    }
+  ];
+  
+  return (
+    <>
+      {/* 涓婚〉鑻遍泟鍖哄煙 */}
+      <section className="relative bg-gradient-to-br from-primary/90 via-primary/80 to-accent/80 h-[90vh] flex items-center">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-pattern-yijing"></div>
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 z-10 relative">
+          <div className="max-w-3xl text-white">
+            <h1 className="text-5xl md:text-6xl font-mashan mb-4">
+              鏄撶粡鐜璁捐
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 font-light">
+              铻嶅悎鍙よ€佹櫤鎱т笌鐜颁唬绌洪棿璁捐
+            </p>
+            <p className="text-lg mb-12 opacity-90">
+              鎴戜滑鑷村姏浜庡皢鏄撶粡鐨勫摬瀛︽櫤鎱т笌鐜颁唬璁捐鍘熷垯鐩哥粨鍚堬紝涓烘偍鎵撻€犲拰璋愩€佸钩琛′笖缇庤鐨勭敓娲讳笌宸ヤ綔鐜銆?
+            </p>
+            <Link 
+              href="/about" 
+              className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-md text-lg transition-colors"
+            >
+              浜嗚В鏇村
+            </Link>
+          </div>
+        </div>
+      </section>
+      
+      {/* 杞挱鍥惧睍绀?*/}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-mashan text-primary text-center mb-12">
+            绮鹃€夋渚嬪睍绀?
+          </h2>
+          <Carousel items={carouselItems} />
+        </div>
+      </section>
+      
+      {/* 绠€浠嬮儴鍒?*/}
+      <section className="py-20 bg-neutral">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-mashan text-primary mb-8">
+              涓轰粈涔堥€夋嫨鏄撶粡鐜璁捐锛?
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              鏄撶粡鏄腑鍥藉彜浠ｅ摬瀛︾殑绮鹃珦锛岄€氳繃鐞嗚В闃撮槼浜旇銆佸叓鍗︾瓑姒傚康锛屾垜浠兘澶熷垱閫犲嚭涓庤嚜鐒跺拰璋愬叡鐢熺殑绌洪棿銆傛垜浠殑璁捐鐞嗗康铻嶅悎浜嗚繖浜涘彜鑰佹櫤鎱т笌鐜颁唬缇庡锛屼负鎮ㄧ殑瀹跺眳鎴栧姙鍏┖闂村甫鏉ュ钩琛°€佸拰璋愪笌娲诲姏銆?
+            </p>
+            <div className="flex flex-col md:flex-row justify-center gap-6 mt-10">
+              <div className="bg-white p-6 rounded-lg shadow-md text-center flex-1 hover:shadow-lg transition-shadow">
+                <div className="text-5xl text-primary mb-4">15+</div>
+                <p className="text-gray-700">澶氬勾璁捐缁忛獙</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md text-center flex-1 hover:shadow-lg transition-shadow">
+                <div className="text-5xl text-primary mb-4">200+</div>
+                <p className="text-gray-700">鎴愬姛妗堜緥</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md text-center flex-1 hover:shadow-lg transition-shadow">
+                <div className="text-5xl text-primary mb-4">98%</div>
+                <p className="text-gray-700">瀹㈡埛婊℃剰搴?/p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* 鐗硅壊鏈嶅姟 */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-mashan text-primary text-center mb-16">
+            鎴戜滑鐨勭壒鑹叉湇鍔?
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                title: "浣忓畢椋庢按璁捐",
+                description: "鏍规嵁鏄撶粡鍘熺悊锛屼负鎮ㄧ殑瀹跺眳鐜杩涜涓撲笟瑙勫垝涓庡竷灞€锛屽垱閫犲拰璋愯垝閫傜殑鐢熸椿绌洪棿銆?
+              },
+              {
+                title: "鍔炲叕绌洪棿浼樺寲",
+                description: "閽堝鍟嗕笟涓庡姙鍏満鎵€锛屾彁渚涘熀浜庢槗缁忓師鐞嗙殑绌洪棿瑙勫垝锛屾彁鍗囧伐浣滄晥鐜囦笌鍛樺伐绂忕銆?
+              },
+              {
+                title: "鐜鑳介噺璇勪及",
+                description: "瀵圭幇鏈夌幆澧冭繘琛屽叏闈㈢殑鑳介噺鍦鸿瘎浼帮紝鎵惧嚭涓嶅拰璋愬洜绱犲苟鎻愪緵涓撲笟鏀瑰杽寤鸿銆?
+              },
+              {
+                title: "涓€у寲鍜ㄨ鏈嶅姟",
+                description: "鏍规嵁鎮ㄧ殑鐢熻景鍏瓧鍜屼釜浜洪渶姹傦紝鎻愪緵閲忚韩瀹氬埗鐨勭幆澧冭璁′笌璋冩暣鏂规銆?
+              }
+            ].map((item, index) => (
+              <div 
+                key={index}
+                className="bg-neutral p-8 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow"
+              >
+                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl text-primary">鉁?/span>
+                </div>
+                <h3 className="text-xl font-bold text-primary mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* 涓撳鍥㈤槦 */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-mashan text-primary text-center mb-16">
+            鎴戜滑鐨勪笓瀹跺洟闃?
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                name: "寮犲ぇ甯?,
+                title: "棣栧腑璁捐甯?,
+                description: "20骞存槗缁忕幆澧冭璁＄粡楠岋紝涓撴敞浜庡晢涓氱┖闂寸殑椋庢按甯冨眬浼樺寲銆?
+              },
+              {
+                name: "鏉庢暀鎺?,
+                title: "鏄撶粡瀛︽湳椤鹃棶",
+                description: "鍥藉唴鐭ュ悕鏄撳涓撳锛岃憲鏈夈€婄幇浠ｇ┖闂翠笌鏄撶粡銆嬬瓑澶氶儴钁椾綔銆?
+              },
+              {
+                name: "鐜嬭璁″笀",
+                title: "瀹ゅ唴绌洪棿璁捐甯?,
+                description: "灏嗙幇浠ｈ璁＄悊蹇典笌浼犵粺椋庢按瀛﹀阀濡欑粨鍚堬紝鎵撻€犵編瑙備笌瀹炵敤鍏煎鐨勭┖闂淬€?
+              }
+            ].map((item, index) => (
+              <div 
+                key={index}
+                className="bg-neutral p-8 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow"
+              >
+                <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl text-primary">馃懁</span>
+                </div>
+                <h3 className="text-xl font-bold text-primary mb-2">
+                  {item.name}
+                </h3>
+                <p className="text-primary/80 mb-4">{item.title}</p>
+                <p className="text-gray-600">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* 鑱旂郴鎴戜滑 */}
+      <section className="py-20 bg-gradient-to-br from-primary/90 via-primary/80 to-accent/80 relative">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-pattern-yijing opacity-30"></div>
+          <div className="absolute inset-0 bg-black/20"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto text-center text-white">
+            <h2 className="text-3xl md:text-4xl font-mashan mb-8">
+              寮€鍚拰璋愮┖闂翠箣鏃?
+            </h2>
+            <p className="text-lg mb-10">
+              鏃犺鎮ㄩ渶瑕佸灞呴姘磋皟鏁淬€佸姙鍏┖闂磋鍒掕繕鏄晢涓氬簵閾哄竷灞€锛屾垜浠兘鑳戒负鎮ㄦ彁渚涗笓涓氱殑鏄撶粡鐜璁捐瑙ｅ喅鏂规銆傜珛鍗宠仈绯绘垜浠紝寮€鍚拰璋愮┖闂翠箣鏃呫€?
+            </p>
+            <Link 
+              href="/contact" 
+              className="bg-white text-primary hover:bg-neutral transition-colors px-8 py-3 rounded-md text-lg inline-block"
+            >
+              棰勭害鍜ㄨ
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

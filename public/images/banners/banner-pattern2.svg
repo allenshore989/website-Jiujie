@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)" />
+      <circle cx="0" cy="0" r="0.5" fill="rgba(255,255,255,0.05)" />
+      <circle cx="0" cy="20" r="0.5" fill="rgba(255,255,255,0.05)" />
+      <circle cx="20" cy="0" r="0.5" fill="rgba(255,255,255,0.05)" />
+      <circle cx="20" cy="20" r="0.5" fill="rgba(255,255,255,0.05)" />
+    </pattern>
+  </defs>
+  
+  <!-- 基础背景 -->
+  <rect width="100%" height="100%" fill="url(#dots)" />
+  
+  <!-- 装饰元素 -->
+  <g opacity="0.2">
+    <!-- 五行元素象征 -->
+    <g transform="translate(200, 150)">
+      <!-- 木 - 竖线 -->
+      <line x1="-60" y1="-40" x2="-60" y2="40" stroke="white" stroke-width="3" />
+      <line x1="-40" y1="-40" x2="-40" y2="40" stroke="white" stroke-width="3" />
+      
+      <!-- 火 - 三角形 -->
+      <polygon points="0,-40 -20,40 20,40" fill="none" stroke="white" stroke-width="3" />
+      
+      <!-- 土 - 正方形 -->
+      <rect x="40" y="-30" width="60" height="60" fill="none" stroke="white" stroke-width="3" />
+      
+      <!-- 金 - 圆形 -->
+      <circle cx="140" cy="0" r="30" fill="none" stroke="white" stroke-width="3" />
+      
+      <!-- 水 - 波浪线 -->
+      <path d="M180,-20 Q195,0 180,20 Q165,40 180,60" fill="none" stroke="white" stroke-width="3" />
+    </g>
+  </g>
+  
+  <!-- 中心装饰 -->
+  <g transform="translate(600, 150)">
+    <circle cx="0" cy="0" r="50" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
+    <circle cx="0" cy="0" r="40" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
+    <circle cx="0" cy="0" r="30" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
+    <circle cx="0" cy="0" r="20" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
+    <circle cx="0" cy="0" r="10" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
+    
+    <!-- 放射线 -->
+    <line x1="0" y1="-60" x2="0" y2="-80" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+    <line x1="42" y1="-42" x2="56" y2="-56" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+    <line x1="60" y1="0" x2="80" y2="0" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+    <line x1="42" y1="42" x2="56" y2="56" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+    <line x1="0" y1="60" x2="0" y2="80" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+    <line x1="-42" y1="42" x2="-56" y2="56" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+    <line x1="-60" y1="0" x2="-80" y2="0" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+    <line x1="-42" y1="-42" x2="-56" y2="-56" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+  </g>
+  
+  <!-- 右侧装饰 -->
+  <g transform="translate(950, 150)">
+    <path d="M0,0 Q20,-50 40,0 Q60,50 80,0 Q100,-50 120,0" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+  </g>
+  
+  <!-- 中文字符 -->
+  <text x="600" y="160" font-family="serif" font-size="80" fill="rgba(255,255,255,0.03)" text-anchor="middle" dominant-baseline="middle">五行</text>
+  
+  <!-- 装饰性横线 -->
+  <line x1="100" y1="260" x2="1100" y2="260" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+  <line x1="150" y1="270" x2="1050" y2="270" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+  
+  <!-- 顶部装饰线 -->
+  <line x1="100" y1="40" x2="1100" y2="40" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+  <line x1="150" y1="30" x2="1050" y2="30" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+</svg> 
